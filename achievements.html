@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements | Isobel</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e8f5e9;
+            color: #183d2b;
+        }
+
+        header {
+            background-color: #164d35;
+            color: white;
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            min-height: 74px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 9px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0.3px;
+        }
+
+        nav a:hover {
+            color: #b9f6ca;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background-image: url("DSC00677 - Copy (2).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: white;
+        }
+
+        .highlight {
+            color: white;
+            font-weight: bold;
+        }
+
+        .hero-introduction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 75px 10%;
+            background-color: #c8e6c9;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .hero-introduction h1 {
+            font-size: 38px;
+            color: #164d35;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .hero-introduction h2 {
+            font-size: 23px;
+            color: #26734d;
+            margin-bottom: 20px;
+        }
+
+        .hero-introduction p {
+            line-height: 1.8;
+            max-width: 750px;
+            margin: 15px auto;
+            text-align: center;
+            color: #183d2b;
+            font-size: 16px;
+        }
+
+        .hero-image {
+            flex: 0 1 450px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 550px;
+            height: 550px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .achievements-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f1f8e9;
+        }
+
+        .achievements-section h2 {
+            font-size: 30px;
+            color: #164d35;
+            margin: 0 auto 35px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #a5c9ad;
+            max-width: 1000px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #dcedc8;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(22, 77, 53, 0.08);
+            transition: 0.3s ease;
+            width: 100%;
+            min-height: 0;
+        }
+
+        .card:hover {
+            background-color: #c8e6c9;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(22, 77, 53, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 9px;
+            margin: 10px 0 18px;
+            display: block;
+        }
+
+        .card h3 {
+            color: #26734d;
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            font-size: 15px;
+            margin: 8px 0;
+        }
+
+        .experiences-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f1f8e9;
+        }
+
+        .experiences-section h2 {
+            font-size: 30px;
+            color: #164d35;
+            margin: 0 auto 35px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #a5c9ad;
+            max-width: 1000px;
+        }
+
+        .experiences-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+            align-items: stretch;
+        }
+
+        .experience-card {
+            background-color: #dcedc8;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(22, 77, 53, 0.08);
+            transition: 0.3s ease;
+            height: 100%;
+            min-height: 0;
+        }
+
+        .experience-card:hover {
+            background-color: #c8e6c9;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(22, 77, 53, 0.15);
+        }
+
+        .experience-card h3 {
+            color: #164d35;
+            font-size: 23px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #a5c9ad;
+        }
+
+        .experience-card h4 {
+            color: #26734d;
+            font-size: 17px;
+            margin: 22px 0 12px;
+            text-align: left;
+        }
+
+        .experience-card p {
+            line-height: 1.7;
+            text-align: left;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .learned-section {
+            padding: 75px 20px;
+            text-align: center;
+            background-color: #c8e6c9;
+        }
+
+        .learned-section h2 {
+            font-size: 30px;
+            color: #164d35;
+            margin-bottom: 20px;
+        }
+
+        .learned-section p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #183d2b;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 18px 25px;
+            background-color: #164d35;
+            color: white;
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logowhite.png" alt="Isobel Logo">
+            <h2>ISOBEL'S PORTFOLIO</h2>
+        </div>
+
+        <nav>
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="hobbies.html">HOBBIES</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="goals.html">GOALS</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="favorites.html">FAVORITES</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>ACHIEVEMENTS AND AWARDS</h1>
+        <p>Recognizing my efforts, progress, and experiences.</p>
+    </div>
+
+    <section class="achievements-section">
+        <h2>My Achievements</h2>
+
+        <div class="container">
+
+            <div class="card">
+                <h3>Negros Occidental Private Schools Sports, Cultural, and Educational Association</h3>
+                <img src="IMG_1617.jpg" alt="NOPSSCEA">
+                <p>Being part of NOPSSCEA was a meaningful experience that allowed me to showcase my talents, work with others, and represent my school in a competitive event.</p>
+                <p>Year: 2024</p>
+            </div>
+
+            <div class="card">
+                <h3>Augustinian Schools Athletic Meet</h3>
+                <img src="IMG_1620.jpg" alt="ASAM">
+                <p>Participating in the ASAM helped me develop teamwork, discipline, and confidence while representing my school outside Bacolod City. It was a valuable opportunity to compete with other Augustinian schools, share my passion for dancing, and create unforgettable memories with my teammates.</p>
+                <p>Year: 2024</p>
+            </div>
+
+            <div class="card">
+                <h3>Private Schools Athletic Association</h3>
+                <img src="IMG_1621.jpg" alt="PRISAA">
+                <p>Being part of PRISAA was an opportunity to represent my school, share my passion for dancing, and gain valuable experiences through competition.</p>
+                <p>Year: 2026</p>
+            </div>
+
+            <div class="card">
+                <h3>International Tour Immersion</h3>
+                <img src="IMG_1623.jpg" alt="Malaysia and Singapore">
+                <p>My International Tour Immersion in Malaysia and Singapore gave me the chance to explore new places, experience different cultures, and learn beyond the classroom.</p>
+                <p>Year: 2026</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="experiences-section">
+        <h2>My Academic Journey and Recognitions</h2>
+
+        <div class="experiences-container">
+
+            <div class="experience-card">
+                <h3>Grade 10</h3>
+
+                <h4>Awards</h4>
+                <p>💙 Fidelity</p>
+                <p>📄 Academic Distinction</p>
+                <p>📄 Honors in Department</p>
+                <p>🌳 Service Award (SGC-RTC on Cleanliness)</p>
+                <p>💃 Outstanding Club Member (Sayaweh Club)</p>
+            </div>
+
+            <div class="experience-card">
+                <h3>Grade 11</h3>
+
+                <h4>Positions & Organizations</h4>
+                <p>💙 Senior High Student Government: Senator</p>
+                <p>📜 Mayor of St. Isidore</p>
+                <p>⛑️ Red Cross Youth (RCY) Member</p>
+
+                <h4>Achievements</h4>
+                <p>🥇 Augustinian Schools Athletic Meet (ASAM/Regional) - Hiphop (University of San Agustin, Iloilo City)</p>
+                <p>🥇 Intramurals (Litmus) 2024 - Hiphop</p>
+                <p>💃 Indak 2025</p>
+            </div>
+
+            <div class="experience-card">
+                <h3>Grade 12</h3>
+
+                <h4>Academic Achievements</h4>
+                <p>🥈 With High Honors - Only 1 in Technical Vocational and Livelihood in Information Communication and Technology</p>
+                <p>🥈 With High Honors - Rank 3 in Overall Technical Vocational and Livelihood</p>
+                <p>🏅 With High Honors - Rank 17 in Overall Senior High School</p>
+
+                <h4>Positions & Organizations</h4>
+                <p>💙 Senior High Student Government: Committee Head on Environmental and Outreach Activities</p>
+                <p>📝 Secretary of St. Benedict & St. Gabriel</p>
+                <p>📣 Ambassador</p>
+                <p>⛑️ Red Cross Youth (RCY) Member</p>
+
+                <h4>Achievements, Recognitions & Special Awards</h4>
+                <p>💙 Fidelist</p>
+                <p>🩶 Outstanding Performance in Information Communication and Technology</p>
+                <p>🏆 Intramurals (Litmus) 2025 - Hiphop</p>
+                <p>🥈 Inter Highschool Hiphop Competition</p>
+                <p>🥈 Private Schools Athletic Association (PRISAA/Regional) - Hiphop</p>
+                <p>STI West Negros University, Bacolod City</p>
+                <p>💃 Indayog 2026</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="learned-section">
+        <h2>What I Learned</h2>
+
+        <p>
+            I learned that achievements are not only measured by awards
+            but also by the effort, patience, and dedication we give
+            to everything we do. Every small improvement is also a
+            reason to be proud.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Isobel | Personal Portfolio Website</p>
+    </footer>
+
+</body>
+</html>

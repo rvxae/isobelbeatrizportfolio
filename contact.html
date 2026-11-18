@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Isobel</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e8f5e9;
+            color: #183d2b;
+        }
+
+        header {
+            background-color: #164d35;
+            color: white;
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            min-height: 74px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 9px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0.3px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b9f6ca;
+        }
+
+        .hero {
+            background-image: url("DSC00677 - Copy (2).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 150px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin: 0 0 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 17px;
+            margin: 0;
+        }
+
+        .contact-section {
+            background-color: #f1f8e9;
+            padding: 50px 30px;
+        }
+
+        .contact-layout {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            color: #164d35;
+            font-size: 26px;
+            margin: 0 auto 35px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #a5c9ad;
+            max-width: 1000px;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .contact-card {
+            background-color: #dcedc8;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            background-color: #c8e6c9;
+            transform: translateY(-5px);
+        }
+
+        .contact-card h3 {
+            color: #26734d;
+            font-size: 19px;
+            margin: 0 0 13px;
+        }
+
+        .contact-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .contact-card a {
+            color: #164d35;
+            text-decoration: none;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+            transition: 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: #2e7d32;
+            text-decoration: underline;
+        }
+
+        .thank-you-section {
+            background-color: #c8e6c9;
+            padding: 45px 30px;
+            text-align: center;
+        }
+
+        .thank-you-section h2 {
+            color: #164d35;
+            font-size: 26px;
+            max-width: 1000px;
+            margin: 0 auto 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #a5c9ad;
+        }
+
+        .thank-you-section p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #164d35;
+            color: white;
+            min-height: 74px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 18px 25px;
+        }
+
+        footer p {
+            font-size: 13px;
+            margin: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logowhite.png">
+            <h2>ISOBEL'S PORTFOLIO</h2>
+        </div>
+
+        <nav>
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="hobbies.html">HOBBIES</a>
+            <a href="achievements.html">ACHIEVEMENTS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="goals.html">GOALS</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="favorites.html">FAVORITES</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>CONTACT ME</h1>
+        <p>Feel free to connect with me through my social platforms.</p>
+    </section>
+
+    <section class="contact-section">
+
+        <div class="contact-layout">
+
+            <h2>My Contact Information</h2>
+
+            <div class="contact-container">
+
+                <div class="contact-card">
+                    <h3>Email Address</h3>
+                    <p>
+                        <a href="mailto:isobelbeatriztupas@gmail.com">
+                            isobelbeatriztupas@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Facebook</h3>
+                    <p>
+                        <a href="https://www.facebook.com/share/19LCHschiL/">
+                            Visit My Facebook Profile
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <h3>Instagram</h3>
+                    <p>
+                        <a href="https://www.instagram.com/rvxaeo?mdxt=MWp4c3Z2MHV3dmd5Yw==">
+                            Visit My Instagram Profile
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="thank-you-section">
+        <h2>Thank You for Visiting!</h2>
+
+        <p>
+            Thank you for taking the time to explore my portfolio.
+            I hope this website has helped you learn more about me,
+            my experiences, and my journey as an Information Technology student.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Isobel | Personal Portfolio Website</p>
+    </footer>
+
+</body>
+</html>

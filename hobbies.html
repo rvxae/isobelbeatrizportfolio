@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies | Isobel</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e8f5e9;
+            color: #183d2b;
+        }
+
+        header {
+            background-color: #164d35;
+            color: white;
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            min-height: 74px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 9px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0.3px;
+        }
+
+        nav a:hover {
+            color: #b9f6ca;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background-image: url("DSC00677 - Copy (2).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: white;
+        }
+
+        .highlight {
+            color: white;
+            font-weight: bold;
+        }
+
+        .hero-introduction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 75px 10%;
+            background-color: #c8e6c9;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .hero-introduction h1 {
+            font-size: 38px;
+            color: #164d35;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .hero-introduction h2 {
+            font-size: 23px;
+            color: #26734d;
+            margin-bottom: 20px;
+        }
+
+        .hero-introduction p {
+            line-height: 1.8;
+            max-width: 750px;
+            margin: 15px auto;
+            text-align: center;
+            color: #183d2b;
+            font-size: 16px;
+        }
+
+        .hero-image {
+            flex: 0 1 450px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 550px;
+            height: 550px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .hobbies-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f1f8e9;
+        }
+
+        .hobbies-section h2 {
+            font-size: 30px;
+            color: #164d35;
+            margin: 0 auto 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #a5c9ad;
+            max-width: 1000px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #dcedc8;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(22, 77, 53, 0.08);
+            transition: 0.3s ease;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .card:hover {
+            background-color: #c8e6c9;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(22, 77, 53, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 9px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            color: #26734d;
+            margin: 0 0 10px;
+            font-size: 19px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .interests-section {
+            padding: 75px 20px;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .interests-section h2 {
+            font-size: 30px;
+            color: #164d35;
+            margin: 0 auto 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #a5c9ad;
+            max-width: 850px;
+        }
+
+        .interests-section p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #183d2b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px 25px;
+            background-color: #164d35;
+            color: white;
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logowhite.png">
+            <h2>ISOBEL'S PORTFOLIO</h2>
+        </div>
+
+        <nav>
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="achievements.html">ACHIEVEMENTS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="goals.html">GOALS</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="favorites.html">FAVORITES</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>HOBBIES AND INTERESTS</h1>
+        <p>The things I enjoy doing in my free time.</p>
+    </div>
+
+    <section class="hobbies-section">
+        <h2>My Hobbies</h2>
+
+        <div class="container">
+
+            <div class="card">
+                <img src="IMG_1639.jpg" alt="Traveling and discovering new places">
+
+                <h3>Traveling</h3>
+                <p>
+                    I enjoy traveling and discovering new places. I love
+                    experiencing different environments, appreciating
+                    beautiful scenery, and creating memories along the way.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="IMG_1658.png" alt="Listening to music">
+
+                <h3>Listening to Music</h3>
+                <p>
+                    I love listening to music because it helps me relax,
+                    improve my mood, and enjoy different sounds and melodies.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="IMG_0882.jpeg" alt="Different kinds of delicious food">
+
+                <h3>Eating and Exploring Food</h3>
+                <p>
+                    I enjoy eating different kinds of food and discovering
+                    new flavors. Trying delicious meals is one of the simple
+                    things that makes me happy.
+                </p>
+            </div>
+
+            <div class="card">
+                <img src="IMG_0872.jpg" alt="Sleeping and resting">
+
+                <h3>Sleeping and Resting</h3>
+                <p>
+                    I enjoy sleeping because it gives me time to recharge,
+                    relax, and regain my energy after a long day.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="interests-section">
+        <h2>My Interests</h2>
+
+        <p>
+            I am interested in technology, creativity, and activities
+            that allow me to discover new skills. I also enjoy exploring
+            different ideas and learning from my experiences.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Isobel | Personal Portfolio Website</p>
+    </footer>
+
+</body>
+</html>

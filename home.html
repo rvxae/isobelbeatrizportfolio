@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isobel - Home</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            color: #183d2b;
+        }
+
+        header {
+            background-color: #164d35;
+            color: white;
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            min-height: 74px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 9px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0.3px;
+        }
+
+        nav a:hover {
+            color: #b9f6ca;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background-image: url("DSC00677 - Copy (2).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: white;
+        }
+
+        .highlight {
+            color: white;
+            font-weight: bold;
+        }
+
+        .hero-introduction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 75px 10%;
+            background-color: #c8e6c9;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .hero-introduction h1 {
+            font-size: 38px;
+            color: #164d35;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .hero-introduction h2 {
+            font-size: 23px;
+            color: #26734d;
+            margin-bottom: 20px;
+        }
+
+        .hero-introduction p {
+            line-height: 1.8;
+            max-width: 750px;
+            margin: 15px auto;
+            text-align: center;
+            color: #183d2b;
+            font-size: 16px;
+        }
+
+        .hero-image {
+            flex: 0 1 450px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 550px;
+            height: 550px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f1f8e9;
+        }
+
+        .section h2 {
+            color: #164d35;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1050px;
+            margin: 35px auto;
+        }
+
+        .card {
+            background-color: #dcedc8;
+            padding: 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card:hover {
+            background-color: #c8e6c9;
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #26734d;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            color: #26734d;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px 25px;
+            background-color: #164d35;
+            color: white;
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="logowhite.png">
+            <h2>ISOBEL'S PORTFOLIO</h2>
+        </div>
+
+        <nav>
+            <a href="about.html">ABOUT</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="hobbies.html">HOBBIES</a>
+            <a href="achievements.html">ACHIEVEMENTS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="goals.html">GOALS</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="favorites.html">FAVORITES</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <h1>HELLO, I'M ISOBEL</h1>
+
+        <p>
+            Welcome to my personal portfolio website. This is where I share my
+            background, interests, skills, and goals as I continue growing as a
+            <span class="highlight">BSIT student</span>.
+        </p>
+
+    </section>
+
+    <section class="hero-introduction">
+
+        <div class="hero-text">
+
+            <h1>WELCOME TO MY WEBSITE!</h1>
+
+            <p>
+                I am a Bachelor of Science in Information Technology
+                (BSIT) student who is passionate about learning,
+                creativity, and discovering new things. I created
+                this website to introduce myself, share my experiences,
+                and showcase the different aspects of my life,
+                including my educational background, personal interests,
+                skills, achievements, and future goals.
+            </p>
+
+            <p>
+                As I continue my journey as a student, I look forward
+                to gaining new knowledge, improving my abilities,
+                and exploring opportunities that will help me grow
+                both personally and academically.
+            </p>
+
+            <p>
+                This website represents a little part of who I am
+                and the journey I am currently taking. Feel free
+                to explore and get to know me better!
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="section">
+
+        <h2>Explore My Portfolio</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>About Me</h3>
+                <img src="IMG_0343.PNG">
+                <p>Learn more about my personality, values, and interests.</p>
+                <a href="about.html">Visit Page</a>
+            </div>
+
+            <div class="card">
+                <h3>Skills</h3>
+                <img src="IMG_0344.PNG">
+                <p>Discover the skills I'm developing in technology and beyond.</p>
+                <a href="skills.html">Visit Page</a>
+            </div>
+
+            <div class="card">
+                <h3>Hobbies and Interests</h3>
+                <img src="IMG_080808.JPEG">
+                <p>Explore the activities and interests I enjoy.</p>
+                <a href="hobbies.html">Visit Page</a>
+            </div>
+
+            <div class="card">
+                <h3>Goals and Future Career</h3>
+                <img src="IMG_0862.PNG">
+                <p>Read about my future plans and career aspirations.</p>
+                <a href="goals.html">Visit Page</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Isobel | Personal Portfolio Website</p>
+    </footer>
+
+</body>
+</html>

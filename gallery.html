@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Isobel</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e8f5e9;
+            color: #183d2b;
+        }
+
+        header {
+            background-color: #164d35;
+            color: white;
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            min-height: 74px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 9px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0.3px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #b9f6ca;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background-image: url("DSC00677 - Copy (2).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: white;
+        }
+
+        /* MEMORIES SECTION */
+        .memories-section {
+            padding: 55px 30px;
+            background-color: #f1f8e9;
+        }
+
+        .memories-layout {
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .memories-section h2 {
+            text-align: center;
+            color: #164d35;
+            font-size: 26px;
+            margin: 0 auto 40px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #a5c9ad;
+            max-width: 1000px;
+        }
+
+        /* ASYMMETRICAL 3-COLUMN LAYOUT */
+        .memory-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 390px;
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .memory-card {
+            background-color: #dcedc8;
+            padding: 20px;
+            border-radius: 14px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+            min-width: 0;
+            min-height: 0;
+            overflow: hidden;
+        }
+
+        /* FIRST ROW: EQUAL SIDES - WIDE MIDDLE */
+        .memory-card:nth-child(6n + 1) {
+            grid-column: span 3;
+        }
+
+        .memory-card:nth-child(6n + 2) {
+            grid-column: span 6;
+        }
+
+        .memory-card:nth-child(6n + 3) {
+            grid-column: span 3;
+        }
+
+        .memory-card:nth-child(6n + 4) {
+            grid-column: span 5;
+        }
+
+        .memory-card:nth-child(6n + 5) {
+            grid-column: span 3;
+        }
+
+        .memory-card:nth-child(6n + 6) {
+            grid-column: span 4;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* PICTURES FILL THEIR AVAILABLE CONTAINER SPACE */
+        .memory-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            display: block;
+        }
+
+        /* MOMENTS SECTION */
+        .moments-section {
+            background-color: #c8e6c9;
+            padding: 45px 30px;
+            text-align: center;
+        }
+
+        .moments-section h2 {
+            color: #164d35;
+            font-size: 26px;
+            margin: 0 auto 18px;
+            max-width: 1000px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #a5c9ad;
+        }
+
+        .moments-section p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #164d35;
+            color: white;
+            min-height: 74px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 18px 25px;
+        }
+
+        footer p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        /* TABLET RESPONSIVE */
+        @media (max-width: 768px) {
+            .memory-container {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 340px;
+                gap: 20px;
+            }
+
+            .memory-card:nth-child(n) {
+                grid-column: span 1;
+            }
+
+            .memory-card {
+                padding: 20px;
+            }
+
+            .hero {
+                padding: 100px 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 600px) {
+            .memory-container {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 320px;
+                gap: 22px;
+            }
+
+            .memory-card:nth-child(n) {
+                grid-column: span 1;
+            }
+
+            .memory-card {
+                padding: 20px;
+            }
+
+            .memories-section {
+                padding: 40px 20px;
+            }
+
+            .memories-section h2,
+            .moments-section h2 {
+                font-size: 23px;
+            }
+
+            .hero {
+                padding: 100px 20px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="logowhite.png" alt="Portfolio logo">
+            <h2>ISOBEL'S PORTFOLIO</h2>
+        </div>
+
+        <nav>
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="hobbies.html">HOBBIES</a>
+            <a href="achievements.html">ACHIEVEMENTS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="goals.html">GOALS</a>
+            <a href="favorites.html">FAVORITES</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>MY PHOTO GALLERY</h1>
+        <p>A collection of moments and memories.</p>
+    </section>
+
+    <!-- MEMORIES SECTION -->
+    <section class="memories-section">
+
+        <div class="memories-layout">
+
+            <h2>My Memories</h2>
+
+            <div class="memory-container">
+
+                <div class="memory-card">
+                    <img src="IMG_1397.jpg" alt="with Kishian">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1084.png" alt="Compassion">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1653.jpg" alt="Intrams">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1654.PNG" alt="with MITT">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1648.jpg" alt="Malaysia">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1624.jpg" alt="Gangs">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1627.jpg" alt="Singapore">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1078.png" alt="Karaoke with chikitings">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1641.jpg" alt="Beach">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1086.png" alt="My boys">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1093.png" alt="with Council">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1081.png" alt="Cuties from arki">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1643.jpg" alt="Iloilo">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1079.png" alt="Mangrove">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1640.jpg" alt="Iloilo ASAM">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1645.jpg" alt="MITT w/o angelo"> 
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1650.jpg" alt="Malaysia again">
+                </div>
+
+                <div class="memory-card">
+                    <img src="IMG_1642.jpg" alt="My ogs">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MOMENTS SECTION -->
+    <section class="moments-section">
+        <h2>Moments Worth Remembering</h2>
+
+        <p>
+            Every picture tells a story and reminds me of the people,
+            places, and experiences that have become part of my journey.
+            These memories remind me of how much I have learned and grown.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Isobel | Personal Portfolio Website</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Isobel</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e8f5e9;
+            color: #183d2b;
+        }
+
+        header {
+            background-color: #164d35;
+            color: white;
+            padding: 16px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            min-height: 74px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .logo h2 {
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 9px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0.3px;
+        }
+
+        nav a:hover {
+            color: #b9f6ca;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background-image: url("DSC00677 - Copy (2).jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: white;
+        }
+
+        .highlight {
+            color: white;
+            font-weight: bold;
+        }
+
+        .hero-introduction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 75px 10%;
+            background-color: #c8e6c9;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .hero-introduction h1 {
+            font-size: 38px;
+            color: #164d35;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .hero-introduction h2 {
+            font-size: 23px;
+            color: #26734d;
+            margin-bottom: 20px;
+        }
+
+        .hero-introduction p {
+            line-height: 1.8;
+            max-width: 750px;
+            margin: 15px auto;
+            text-align: center;
+            color: #183d2b;
+            font-size: 16px;
+        }
+
+        .hero-image {
+            flex: 0 1 450px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 550px;
+            height: 550px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .personality-section {
+            padding: 50px 20px;
+            background-color: #e8f5e9;
+            text-align: center;
+        }
+
+        .personality-section h2 {
+            color: #164d35;
+            font-size: 30px;
+        }
+
+        .personality-section > p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .card {
+            background-color: #dcedc8;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card h3 {
+            color: #26734d;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .card:hover {
+            background-color: #c8e6c9;
+            transform: translateY(-5px);
+        }
+
+        .quote-section {
+            padding: 45px 20px;
+            text-align: center;
+            background-color: #c8e6c9;
+        }
+
+        .quote-section h2 {
+            color: #164d35;
+        }
+
+        .quote {
+            font-size: 25px;
+            font-weight: bold;
+            color: #26734d;
+            margin-bottom: 10px;
+        }
+
+        .quote-section p {
+            line-height: 1.6;
+        }
+
+        .personal-info {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f1f8e9;
+        }
+
+        .personal-info h2 {
+            color: #164d35;
+            font-size: 30px;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+            justify-content: center;
+        }
+
+        .info-card {
+            background-color: #dcedc8;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .info-card h3 {
+            color: #26734d;
+        }
+
+        .info-card:hover {
+            background-color: #c8e6c9;
+        }
+
+        .info-card p {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px 25px;
+            background-color: #164d35;
+            color: white;
+            min-height: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="logowhite.png" alt="Isobel Logo">
+            <h2>ISOBEL'S PORTFOLIO</h2>
+        </div>
+
+        <nav>
+            <a href="home.html">HOME</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="hobbies.html">HOBBIES</a>
+            <a href="achievements.html">ACHIEVEMENTS</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="goals.html">GOALS</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="favorites.html">FAVORITES</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <h1>GETTING TO KNOW ME</h1>
+
+        <p>
+            Welcome to my personal portfolio website. This is where I share my
+            background, interests, skills, and goals as I continue growing as a
+            <span class="highlight">BSIT student</span>.
+        </p>
+
+    </section>
+
+    <section class="hero-introduction">
+
+        <div class="hero-text">
+
+            <h1>Hello, I'm Isobel!</h1>
+
+            <p>
+                I am Isobel Beatriz T. Tupas, a student who is continuously
+                learning, discovering new things, and finding ways to grow.
+                Born on June 19, 2008, I am from Bacolod City, Philippines.
+                I consider myself a creative, thoughtful, and compassionate
+                person who values personal growth, meaningful connections,
+                and self-expression.
+            </p>
+
+            <p>
+                I am someone who feels deeply and finds meaning in even the
+                little things. I value kindness, honesty, and understanding.
+                As someone who identifies with the INFJ personality type,
+                I appreciate genuine connections and meaningful conversations.
+                I believe that even the smallest act of kindness can make a
+                difference in someone's life.
+            </p>
+
+            <p>
+                Creativity is an important part of who I am. I express myself
+                through dancing, listening to music, reading books, and
+                exploring stories that allow me to see different perspectives.
+                I also enjoy traveling and appreciating nature, especially
+                the peaceful sight of the sea and beautiful green landscapes.
+            </p>
+
+            <p>
+                I know that I still have so much to learn and discover.
+                I believe that every experience, whether good or difficult,
+                has something to teach me. I want to become more knowledgeable,
+                confident, and capable while staying true to the values and
+                individuality that make me who I am.
+            </p>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="logo.jpg">
+        </div>
+
+    </section>
+
+    <section class="personality-section">
+
+        <h2>A Little About My Personality</h2>
+
+        <p>
+            These are some of the qualities that describe who I am and how
+            I approach life and the people around me.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Compassionate</h3>
+
+                <p>
+                    I value empathy and understanding. I try to see things from
+                    different perspectives and treat others with kindness.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Creative</h3>
+
+                <p>
+                    I enjoy expressing myself through different interests,
+                    exploring ideas, and appreciating art and stories.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Curious</h3>
+
+                <p>
+                    I enjoy learning new things, discovering possibilities,
+                    and gaining experiences that help me improve.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="quote-section">
+
+        <h2>A Reminder I Live By</h2>
+
+        <p class="quote">"Be the only one, not the best one."</p>
+
+        <p>
+            A reminder that individuality matters more than comparison.
+        </p>
+
+    </section>
+
+    <section class="personal-info">
+
+        <h2>Personal Information</h2>
+
+        <p>Some basic details about me.</p>
+
+        <div class="info-cards">
+
+            <div class="info-card">
+                <h3>Full Name</h3>
+                <p>Isobel Beatriz Trinidad Tupas</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Birthday</h3>
+                <p>June 19, 2008</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Course</h3>
+                <p>Bachelor of Science in Information Technology</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Year Level</h3>
+                <p>First Year College</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Location</h3>
+                <p>Bacolod City, Philippines</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Personality Type</h3>
+                <p>INFJ</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Isobel | Personal Portfolio Website</p>
+    </footer>
+
+</body>
+</html>
